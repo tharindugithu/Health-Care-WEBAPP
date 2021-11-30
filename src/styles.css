@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+    overflow-y: scroll;
+    background: grey;
+    box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(9, 236, 35);
+    border-radius: 40px;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 4px solid red;
+}

@@ -1,0 +1,89 @@
+
+h1 {
+  font-family: 'Open Sans';
+  margin-top: 3px;
+  height: 60px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #f5f5f7;
+  background: linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%); 
+  ;
+  font-family:inherit;
+  width: 1527px;
+}
+
+div.content {
+  margin-right: 0px;
+  margin-right: 30px;
+  margin-left: -20px;
+  padding: 10px;
+  margin: 17px 21px 7px 27px;
+}
+.mat-card-header .mat-card-title {
+  margin-bottom: 16px;
+  font-family: cursive;
+  color: rgb(8, 8, 8);
+  text-decoration-line: underline;
+}
+.mat-card-header .mat-card-subtitle:not(:first-child) {
+  margin-top: -8px;
+  font-family: cursive;
+}
+mat-toolbar {
+  justify-content: space-between;
+}
+.mat-slider {
+	background-color: #00126d!important;
+}
+.mat-slider-thumb {
+	background-color: #AAAAAA !important;
+}
+
+.mat-slider-thumb-label {
+	background-color: #AAAAAA !important;
+}
+
+.mat-slider-track-fill {
+	background-color: #AAAAAA !important;
+}
+.mat-toolbar.mat-warn {
+  background: #00126d;
+  color: #fff;
+}
+.mat-card {
+  box-shadow: 21px -3px 20px -1px rgb(0 0 0 / 20%), 15px 1px 1px 0px rgb(0 0 0 / 14%), 13px 1px 3px 2px rgb(0 0 0 / 12%);
+}
+.mat-card-content>:last-child:not(.mat-card-footer) {
+  margin-bottom: 0;
+  font-family: 'Open Sans';
+}
+.mat-card {
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  
+}
+.tum{
+  padding-left: 10px;
+}
+mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  
+}
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  padding: 16px;
+}

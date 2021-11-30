@@ -1,0 +1,68 @@
+
+<ng-container *ngIf="loading$ | async">
+  <div class="overlay"></div>
+  <mat-progress-spinner [mode]="'indeterminate'" color="warn"></mat-progress-spinner>
+</ng-container>
+<h1 style="font-family: 'Open Sans';" @fadein> Tips For Your Health</h1>
+<mat-toolbar color="warn" @fadein>
+  <span>Card view mode</span>
+  <div fxHide.lt-md>
+    <span class="column-label">Columns</span>
+    <mat-slider [max]="6" [min]="3" [(ngModel)]="gridColumns" [thumbLabel]="true">
+    </mat-slider>
+  </div>
+</mat-toolbar>
+<div class="content" @fadein>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div  [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let post of posts" >
+          <mat-card class="example-card">
+              <mat-card-header>
+                  <mat-card-title>{{post.title}}</mat-card-title>
+                  <mat-card-subtitle>Tips for Your Health</mat-card-subtitle>
+              </mat-card-header>
+              <img class="matcard" mat-card-image src="./assets/tip.png" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                  <p>
+                  {{post.source}} and for information of this title click button of browse this link {{post.url}}
+                  </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <a href="{{post.url}}" target="blank">
+                  <button mat-raised-button color="primary">Click</button> 
+                </a>
+                <button  mat-raised-button color="primary">SHARE</button>
+                  <button mat-button>
+                    <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                  </button>
+                  <button mat-button>
+                    <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true"></i>
+                  </button>
+             
+              </mat-card-actions>
+          </mat-card>
+      </div>
+ </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

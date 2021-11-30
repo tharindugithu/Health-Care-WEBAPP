@@ -1,0 +1,66 @@
+
+<mat-toolbar  style="min-height:90px" color="dark">
+    <mat-toolbar-row>
+       <button mat-icon-button (click)="toggleSideBar()">
+        <mat-icon>format_list_bulleted</mat-icon>
+       </button>
+       
+       <div>
+           <img style="width: 80%;" class="image" src="./assets/200.png" alt="">
+       </div>
+       
+       <div fxFlex fxLayout="row" fxLayoutAlign="flex-end bottom" >
+           <ul fxLayout="row" fxLayoutGap="20px" >
+                    <li>
+                        <h6 class="top">we care your health</h6>
+                    </li>
+                    <li>
+                        <button class="details" mat-stroked-button color="warn">Docters Details</button>
+                    </li>
+                    <li>
+                        <a routerLink="/table">
+                        <button class="details" mat-stroked-button color="warn">Channeling Details</button>
+                       </a>
+                    </li>
+                    <li>
+                      <a routerLink="/tips">
+                        <button class="details" mat-icon-button color="warn">
+                            <mat-icon matTooltip="Health tips">tips_and_updates</mat-icon>
+                        </button>
+                    </a> 
+                    </li>
+                    <li>
+                        <button class="details" mat-icon-button color="warn">
+                            <mat-icon matTooltip="settings">settings</mat-icon>
+                        </button>
+                    </li>
+                        <li>
+                         <a routerLink="/support">    
+                        <button class="details" mat-icon-button color="warn">
+                            <mat-icon matTooltip="Support">help_outline</mat-icon>
+                        </button>
+                    </a> 
+                    </li>
+                    <li>
+                        <button class="details" color="warn" mat-button [matMenuTriggerFor]="menu">
+                            <mat-icon matTooltip="Login" class="details" color="warn">person_outline</mat-icon>
+                            Login
+                        </button>
+                        <mat-menu  color="primary"#menu="matMenu">
+                            <a routerLink="/login" style="text-decoration: none;"> 
+                            <button mat-menu-item>
+                                <mat-icon  class="details" color="warn">login</mat-icon>
+                                Login for Petition
+                            </button>
+                            </a>
+                            <button  mat-menu-item>
+                                <mat-icon class="details" color="warn">login</mat-icon>
+                                Login for Doctors
+                            </button>
+                        </mat-menu>
+                    </li>    
+           </ul>
+       </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+

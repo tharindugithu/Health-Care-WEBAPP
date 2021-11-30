@@ -1,0 +1,64 @@
+table {
+    width: 100%;
+    
+  }
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 368%;
+
+
+}
+.container {
+    width: 411%;
+    height: 596px;
+  
+}
+::placeholder{
+    color: aliceblue;
+    
+}
+
+
+h1{
+    font-size: xx-large
+}
+.matt{
+    background: linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%); 
+    color: black;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    width: 1542px;
+    padding-left: 56%;
+    margin-left: -2%;
+}
+table.mat-table {
+    border-spacing: 0;
+    width: 1508px;
+}
+th.mat-header-cell, td.mat-cell {
+    text-align: center;
+    border: 1px solid #CCC;
+    padding: 0 !important;
+}
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    margin-right: 18px;
+    margin-left: 2px;
+}
+mat-progress-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    
+  }
+  
+  .overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+  }

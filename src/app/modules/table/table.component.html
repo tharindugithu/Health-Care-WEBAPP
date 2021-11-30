@@ -1,0 +1,89 @@
+<div class="container"  @fadein >
+    <mat-toolbar class="matt">
+        <h1>Hospital Deatails</h1>
+    </mat-toolbar>
+    <ng-container *ngIf="loading$ | async">
+      <div class="overlay"></div>
+      <mat-progress-spinner [mode]="'indeterminate'" color="warn"></mat-progress-spinner>
+    </ng-container>
+    <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input autocomplete="off">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  >
+
+        
+      
+        <!-- Position Column -->
+       
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="doctorname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Doctor </th>
+          <td mat-cell *matCellDef="let element"> {{element.doctorname}} </td>
+        </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="specialization">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Specialization </th>
+            <td mat-cell *matCellDef="let element"> {{element.specialization}} </td>
+          </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="hospitalname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Hospital/Center </th>
+          <td mat-cell *matCellDef="let element"> {{element.hospitalname}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="starttime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Start-Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.starttime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="endtime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> End-Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.endtime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="charge">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Charges </th>
+          <td mat-cell *matCellDef="let element"> {{element.charge}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="header-row-first-group">
+          <th mat-header-cell *matHeaderCellDef 
+              [attr.colspan]="4"> 
+            Deatails About Doctor
+          </th>
+        </ng-container>
+        
+        <!-- Header row second group -->
+        <ng-container matColumnDef="header-row-second-group">
+          <th mat-header-cell *matHeaderCellDef [attr.colspan]="2"> Doctors Available Time  </th>
+        </ng-container>
+
+        <ng-container matColumnDef="header-row-third-group">
+          <th mat-header-cell *matHeaderCellDef [attr.colspan]="1"> Channel Your Doctor </th>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+            <td mat-cell *matCellDef="let element" style="text-align: right;">
+                <a routerLink="/channel" class="pointer"  matTooltip="Channel Your Doctor">
+                    <button mat-raised-button color="primary">Channel</button>
+                </a>
+                 
+
+                </td>
+         </ng-container>
+
+        
+         <tr mat-header-row *matHeaderRowDef="['header-row-first-group', 'header-row-second-group','header-row-third-group']"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"  ></tr>
+     </table>
+</div>
+

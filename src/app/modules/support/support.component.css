@@ -1,0 +1,40 @@
+div.content {
+    margin-right: 0px;
+    margin-right: 30px;
+    margin-left: -20px;
+    padding: 10px;
+}
+.example-card {
+    max-width: 400px;
+    margin-bottom: 24px;
+    margin-left: 25px;
+    margin-top: 24px;
+   
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.clipartmax.com/png/middle/67-676532_web-dev-01-user-experience.png');
+    background-size: cover;
+    
+  }
+  
+  img {
+    vertical-align: middle;
+    border-style: none;
+    padding: 17px;
+    border-radius: 28px;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 21px -3px 20px -1px rgb(0 0 0 / 20%), 15px 1px 1px 0px rgb(0 0 0 / 14%), 13px 1px 3px 2px rgb(0 0 0 / 12%);
+}
+
+h1 {
+    background:linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%);
+    color: black;
+    height: 51px;
+    font-family: 'Open Sans', sans-serif;
+    width: 1527px;
+    padding-left: 44%;
+    margin-left: 0%;
+    margin-top: 3px;
+}

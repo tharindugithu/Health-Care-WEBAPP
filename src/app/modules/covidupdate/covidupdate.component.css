@@ -1,0 +1,59 @@
+/* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: 25px;
+    border-bottom-width: 1px;
+    padding-right: 28px;
+    contain: inherit;
+    border-bottom-style: solid;
+    background-color: chocolate;
+}
+h1, .h1 {
+    margin-top: 3px;
+    height: 60px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #f5f5f7;
+    background:linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%);
+    font-family:inherit;
+    width: 1527px;
+  }
+  .mat-row{
+      width: 1519px;
+  }
+  .cdk-text-field-autofill-monitored:not(:-webkit-autofill) {
+    animation: cdk-text-field-autofill-end 0s 1ms;
+    height: 44px;
+}
+.icon{
+    padding-left: 90%;
+}
+mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  
+}
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  padding: 16px;
+}
