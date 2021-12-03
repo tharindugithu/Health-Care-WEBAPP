@@ -83,7 +83,7 @@ export class RegisterComponent implements OnInit {
       }else{
         this.errorMessage="Username contains some prohibited symbols (</>)"
       }
-      console.log(error)
+      console.log(this.errorMessage)
       
       this.toastr.warning(this.errorMessage);
       this.showError = true;
