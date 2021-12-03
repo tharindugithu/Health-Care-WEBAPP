@@ -77,11 +77,11 @@ export class RegisterComponent implements OnInit {
       this.errorMessage = error
       console.log(this.errorMessage)
         console.log(this.errorMessage.valueOf())
-      if(this.errorMessage.valueOf() == ("{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}'"))
+      if(this.errorMessage.valueOf() == "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}'")
       {
            this.errorMessage = "Email is already Exists"  
       }
-      else if(this.errorMessage.valueOf() == ("{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}"))
+      else if(this.errorMessage.valueOf() == "{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
       {
            this.errorMessage = "Email is already Exists and Username contains some prohibited symbols(</>)"
       }
