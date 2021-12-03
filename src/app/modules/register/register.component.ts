@@ -76,6 +76,7 @@ export class RegisterComponent implements OnInit {
     },error=>{
       this.errorMessage = error
       console.log(this.errorMessage)
+        console.log(this.errorMessage.valueOf())
       if(this.errorMessage.valueOf() == ("{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}'"))
       {
            this.errorMessage = "Email is already Exists"  
