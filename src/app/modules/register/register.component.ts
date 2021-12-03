@@ -105,11 +105,11 @@ export class RegisterComponent implements OnInit {
   }
   closeWarn(){
     this.showError=false
-     if(this.errorMessage === "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
+     if(this.errorMessage == "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
     {
       this.Email?.reset();
     }
-    else if(this.errorMessage="{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
+    else if(this.errorMessage =="{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
     {
       this.Email?.reset();
       this.Username?.reset();
