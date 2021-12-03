@@ -75,8 +75,7 @@ export class RegisterComponent implements OnInit {
       this.alert=true;
     },error=>{
       this.errorMessage = error
-      console.log(this.errorMessage)
-        console.log(this.errorMessage.valueOf())
+    
       if(this.errorMessage.valueOf() == "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
       {
            this.errorMessage = "Email is already Exists Try to use Different Email"  
@@ -89,8 +88,7 @@ export class RegisterComponent implements OnInit {
       {
         this.errorMessage="Username contains some prohibited symbols (</>)"
       }
-      console.log(this.error)
-      console.log(this.errorMessage)
+     
       this.toastr.warning(this.errorMessage);
       this.showError = true;
       
@@ -104,6 +102,7 @@ export class RegisterComponent implements OnInit {
     this.router.navigate(['/login'])
   }
   closeWarn(){
+    console.log(this.errorMessage)
     this.showError=false
      if(this.errorMessage.valueOf() == "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
       {
