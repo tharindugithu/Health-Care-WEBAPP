@@ -79,11 +79,11 @@ export class RegisterComponent implements OnInit {
         console.log(this.errorMessage.valueOf())
       if(this.errorMessage.valueOf() == "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
       {
-           this.errorMessage = "Email is already Exists"  
+           this.errorMessage = "Email is already Exists Try to use Different Email"  
       }
       else if(this.errorMessage.valueOf() == "{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
       {
-           this.errorMessage = "Email is already Exists and Username contains some prohibited symbols(</>)"
+           this.errorMessage = "Email is already Exists and Username contains some prohibited symbols"
       }
       else
       {
@@ -91,7 +91,7 @@ export class RegisterComponent implements OnInit {
       }
       console.log(this.error)
       console.log(this.errorMessage)
-      this.toastr.warning(error);
+      this.toastr.warning(this.errorMessage);
       this.showError = true;
       
     
@@ -105,6 +105,18 @@ export class RegisterComponent implements OnInit {
   }
   closeWarn(){
     this.showError=false
+     if(this.errorMessage === "{'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
+    {
+      this.Email?.reset();
+    }
+    else if(this.errorMessage="{'Username': [ErrorDetail(string='Contains some prohibited symbols', code='invalid')], 'Email': [ErrorDetail(string='patient with this Email already exists.', code='unique')]}")
+    {
+      this.Email?.reset();
+      this.Username?.reset();
+    }else
+    {
+      this.Username?.reset();
+    }
    
   }
   
