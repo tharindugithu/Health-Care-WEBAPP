@@ -12,7 +12,7 @@ export class DoctordetailsService {
 
      let httpHeaders =new HttpHeaders({
      
-        'Authorization': 'Token d52989a9af45bcae3c7e3b51a3b1b3ad7c05d090'
+        'Authorization': 'Token fbdd071f628c20f62a86b118c6b8a6918104bbc1'
       
      })
 
